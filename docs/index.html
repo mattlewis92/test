@@ -1,5 +1,14 @@
 hey
 
 <script>
-document.body.innerHTML = 'referrer ' + document.referrer + ' user agent ' + navigator.userAgent;
+  
+  function inIframe() {
+  try {
+    return window.self !== window.top;
+  } catch (e) {
+    return true;
+  }
+}
+  
+document.body.innerHTML = 'referrer ' + document.referrer + ' user agent ' + navigator.userAgent + ' inside iframe ' + String(inIframe());
 </script>
