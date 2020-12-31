@@ -18,9 +18,10 @@ jobs:
       
       - name: Alert slack on error
         uses: rtCamp/action-slack-notify@v2
-        with:
-          status: ${{ job.status }}
-          notify_when: 'failure'
+        if: ${{ job.status == 'failure' }}
         env:
           SLACK_WEBHOOK: ${{ secrets.AUTO_PULLBACK_SLACK_WEBHOOK }}
-          SLACK_MESSAGE: 'Could not automatically pullback production to staging, please could someone resolve this manually'  
+          SLACK_MESSAGE: 'Could not automatically pullback production to staging, please could someone resolve this manually'
+          SLACK_ICON_EMOJI: ':lana:'
+          SLACK_USERNAME: 'AutoPullbackBot'
+          SLACK_COLOR: 'bad'
