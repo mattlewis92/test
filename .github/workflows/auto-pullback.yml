@@ -24,4 +24,4 @@ jobs:
           SLACK_MESSAGE: 'Could not automatically pullback production to staging, please could someone resolve this manually'
           SLACK_ICON_EMOJI: ':lana:'
           SLACK_USERNAME: 'AutoPullbackBot'
-          SLACK_COLOR: 'bad'
+          SLACK_COLOR: 'danger'
