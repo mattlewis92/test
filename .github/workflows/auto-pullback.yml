@@ -25,3 +25,4 @@ jobs:
           SLACK_ICON_EMOJI: ':lana:'
           SLACK_USERNAME: 'AutoPullbackBot'
           SLACK_COLOR: 'danger'
+          SLACK_FOOTER: ''
